@@ -12,9 +12,6 @@ const loginToken = id => {
     })
   }
 
-
-
-
 // get all users
 
 exports.getAllUsers = (req,res)=>{
