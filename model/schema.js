@@ -6,35 +6,39 @@ const bcrypt = require('bcryptjs')
 const salt=bcrypt.genSaltSync(10)
 
 const signupSchema = new Schema({
-    name: {
+   firstName: {
         type:String,
     },
+    lastName:{
+      type:String,  
+   },
     email:{
         type:String,   
         unique:true 
     },
+    password:{
+      type:String
+    },
     number:{
         type:Number,
     },
-    password:{
-        type:String
-    }
-    // img:{
-    //     type:String,
-    //     default: 'default.jpg'
-    // },
-    // otp:{
-    //   type:Number
-    // },
-    // video:{
-    //   type: String,
-    //   default: 'default.mp4'
-    // },
-    // pdf:{
-    //   type: String,
-    //   default:"data.pdf"
-
-    // }
+    fullAddress:{
+      type:String
+    },
+    PinCode:{
+      type:String
+    },
+    City:{
+      type:String
+    },
+    img:{
+      type:String,
+      default: 'default.jpg'
+  },
+  numberofbooks:{
+    type:Number
+  }
+  
 
 });
 
